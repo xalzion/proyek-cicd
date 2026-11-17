@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "xalzion/proyek-cicd",
+  "pipelineDirectory": "proyek-cicd",
+  "workspaceDirectory": "proyek-cicd\\proyek-cicd",
+  "repositories": {
+    "xalzion/proyek-cicd": {
+      "repositoryPath": "proyek-cicd\\proyek-cicd",
+      "lastRunOn": "11/18/2026 01:46:48 +07:00"
+    }
+  },
+  "lastRunOn": "11/18/2026 02:13:15 +07:00"
+}

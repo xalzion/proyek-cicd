@@ -81,15 +81,13 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Deploy container
-        shell: bash
         run: |
-          docker stop web-app || true
-          docker rm web-app || true
+          docker stop web-app 2>$null
+          docker rm web-app 2>$null
           docker pull ghcr.io/${{ github.repository }}:latest
           docker run -d --name web-app -p ${{ secrets.APP_PORT }}:80 ghcr.io/${{ github.repository }}:latest
 
       - name: Health check
-        shell: bash
         run: |
-          sleep 3
-          curl -f http://localhost:${{ secrets.APP_PORT }} || exit 1
+          Start-Sleep -Seconds 5
+          curl.exe -f http://localhost:${{ secrets.APP_PORT }}
