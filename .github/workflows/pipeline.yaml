@@ -82,6 +82,7 @@ jobs:
 
       - name: Deploy container
         run: |
+          $ErrorActionPreference = "Continue"
           docker stop web-app 2>$null
           docker rm web-app 2>$null
           docker pull ghcr.io/${{ github.repository }}:latest
